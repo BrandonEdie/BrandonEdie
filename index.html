@@ -27,6 +27,7 @@
 	<div class="row">
 		<div class="col-lg-5 col-md-8 mx-auto shadow border bg-white p-4 rounded">
 			<h2 class="text-center fw-bold mb-3">Lemme Know Who You Are Buh :)</h2>
+
 			<form name="Myform">
 				<div id="form_alerts"></div>
 				<div class="form-group mb-3">
@@ -58,14 +59,42 @@
 
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbyJoUq60YbTkPqGbdSGn2mof5my7HyIF9TzX0LPubpednhWmdNwEtB3dP3sLsuL6k7R/exec'
-        const form = document.forms['Myform']
-        
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => $("#form_alerts").html("<div class='alert alert-success'>Contact message sent successfully.</div>"))
-            .catch(error => $("#form_alerts").html("<div class='alert alert-danger'>Contact message not sent.</div>"))
-        })
+        const form = document.forms['Myform'];
+		
+		function validateEmail(email){
+			return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+
+		}
+
+		function alert1(){
+				$("#form_alerts").html("<div class='alert alert-danger'>Invalid Email.</div>")
+			}
+
+
+
+
+			form.addEventListener('submit', e => {
+				e.preventDefault();
+				let formdata = new FormData(form);
+				let email = formdata.get('Email');
+				
+				//validate email
+				email = validateEmail(email);
+
+
+				if(email == true){
+
+					fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+					.then(response => $("#form_alerts").html("<div class='alert alert-success'>Contact message sent successfully.</div>"))
+					.catch(error => $("#form_alerts").html("<div class='alert alert-danger'>Contact message not sent.</div>"))
+
+				}else{
+					
+					alert1();
+				}
+				
+				
+			})
     </script>
 
 </body>
