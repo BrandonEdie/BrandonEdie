@@ -9,5 +9,6 @@ function sendMail(params) {
     emailjs.send('gmail', 'template_jw4whhg', tempParams)
         .then(function(res){
             console.log('success', res.status);
+            alert('Hey Jesus Christ Loves You');
         })
     }
