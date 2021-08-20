@@ -13,15 +13,20 @@
 	  <h1 class="ml4">
 		<span class="letters letters-1">Jesus Christ</span>
 		<span class="letters letters-2">Is</span>
-	@@ -18,7 +16,6 @@ <h1 class="ml4">
-
+		<span class="letters letters-3">Lord!</span>
+	  </h1>
+	  
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 <script src= "moving letters.js"></script>
 
 <h1  style="font-size:60px;text-align:center;">BRANDON EDIE'S WEBSITE</h1>
 <hr>
 <br>
-	@@ -30,78 +27,59 @@ <h2 style="font-family:courier;">Welcome to My Personal Website,<strong>Remember
+<div style="text-align:center;">
+<h2 style="font-family:courier;">Welcome to My Personal Website,<strong>Remember</strong> Feel Free To Explore And Reach Out To Me <strong><em>Thank You,</em></strong> I Hope To Hear From You Soon!!</h2>
+</div>
+<br>
+<p style="font-family:courier;color:rgb(240, 136, 17);text-align:center"><strong><em>BUT FIRST I WILL NEED YOUR PERSONAL INFORMATION TO NOTIFY YOU OF FURTHER UPDATES</em></strong></p>
 
 <link rel="stylesheet" href="index.css">
 <link rel="stylesheet" href="moving letters.css">
@@ -60,7 +65,7 @@
 	</div>
 </div>
 
-
+	
 	<a href="Affiliate Links.html"><p style="font-family:courier;"></p>Affiliate Links</a> 
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -69,7 +74,7 @@
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbyJoUq60YbTkPqGbdSGn2mof5my7HyIF9TzX0LPubpednhWmdNwEtB3dP3sLsuL6k7R/exec'
         const form = document.forms['Myform'];
-
+		
 		function validateEmail(email){
 			return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
 
@@ -86,7 +91,7 @@
 				e.preventDefault();
 				let formdata = new FormData(form);
 				let email = formdata.get('Email');
-
+				
 				//validate email
 				email = validateEmail(email);
 
@@ -98,7 +103,7 @@
 					.catch(error => $("#form_alerts").html("<div class='alert alert-danger'>Contact message not sent.</div>"))
 
 				}else{
-
+					
 					alert1();
 				}
 				
