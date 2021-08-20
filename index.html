@@ -30,29 +30,35 @@
 
 <link rel="stylesheet" href="index.css">
 <link rel="stylesheet" href="moving letters.css">
-<div class="container py-5">
+<div class="containerpy-5">
 	<div class="row">
-		<div class="col-lg-5 col-md-8 mx-auto shadow border bg-white p-4 rounded">
-			<h2 class="text-center fw-bold mb-3">Lemme Know What You Think :)</h2>
+		<div class="col-lg-5col-md-8mx-autoshadowborderbg-whitep-4rounded">
+			<h2 class="text-center fw-bold mb-3">Would You Like To Contact Me<script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+				<lord-icon
+					src="https://cdn.lordicon.com/nocovwne.json"
+					trigger="loop"
+					colors="primary:#121331,secondary:#08a88a"
+					style="width:70px;height:70px">
+				</lord-icon></h2>
 
 			<form name="Myform" method="POST">
 				<div id="form_alerts"></div>
-				<div class="form-group mb-3">
+				<div class="form-groupmb-3">
 					<label for="name" class="form-label">Name</label>
 					<input type="text" id="name" name="Name" class="form-control" placeholder="Enter your name" required>
 				</div>
-				<div class="form-group mb-3">
+				<div class="form-groupmb-3">
 					<label for="email" class="form-label">Email</label>
 					<input type="email" id="email" name="Email" class="form-control" placeholder="Enter your email address" required>
 				</div>
-				<div class="form-group mb-3">
+				<div class="form-groupmb-3">
 					<label for="message" class="form-label">Message</label>
 					<textarea id="message" name="Message" class="form-control" placeholder="Enter your message" rows="5" required></textarea>
 				</div>
 				<div>
-					<button class="btn btn-primary me-2" type="submit" type="button" value="Send Email"
+					<button class="btnbtn-primaryme-2" type="submit" type="button" value="Send Email"
 					onclick="sendEmail()">Send message!</button>
-					<button class="btn btn-danger" type="reset">Reset the form!</button>
+					<button class="btnbtn-danger" type="reset">Reset the form!</button>
 				</div>
 			</form>
 		</div>
