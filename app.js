@@ -26,7 +26,7 @@ function sendEmail() {
   })
 
   .then(function (message) {
-    alert("Jesus Chrsit Loves You")
+    alert("Jesus Christ Loves You")
   });
 }
 
