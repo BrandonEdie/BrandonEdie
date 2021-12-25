@@ -2,7 +2,7 @@
 A Kid that enjoys web development
 
 
-Also here's a Javascrip[t function to validate an email address:
+Also here's a Javascript function to validate an email address:
 
 function validateEmail(email){
 			return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
