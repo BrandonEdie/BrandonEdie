@@ -25,8 +25,5 @@ function sendEmail() {
     Body: "<h1>"+element.name+"</h1>"+"<h2>"+element.email+"</h2>"+"<h3>"+element.message+"</h3>"
   })
 
-  .then(function (message) {
-    alert("Jesus Christ Loves You")
-  });
 }
 
