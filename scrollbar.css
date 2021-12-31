@@ -1,0 +1,9 @@
+#scrollbarProgress{
+    border-bottom-right-radius: 7px;
+    position: fixed;
+    top: 0;
+    width: 0;
+    height: 8px;
+    background: linear-gradient(to right, #e4a7d2, #f80713);
+    z-index: 10;
+}
